@@ -41,4 +41,4 @@ async def on_typing(channel, user, when):
         await channel.send('Hamari class me mobile chala rahe hain aap @{0}'.format(str(user)))
         typeSwitch=True
 
-client.run(TOKEN)
+client.run(TOKEN[:-1])
