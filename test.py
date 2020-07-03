@@ -39,6 +39,6 @@ async def on_typing(channel, user, when):
     
     if(time.time()>lapsed_time):
         await channel.send('Hamari class me mobile chala rahe hain aap @{0}'.format(str(user)))
-        typeSwitch=True
+        typeSwitch=False
 
 client.run(TOKEN[:-1])
