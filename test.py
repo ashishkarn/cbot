@@ -7,7 +7,7 @@ from datetime import datetime
 import time
 
 client = discord.Client()
-typeSwitch=False
+typeSwitch=True
 
 @client.event
 async def on_ready():
@@ -29,21 +29,19 @@ async def on_message(message):
         print(message.content)
         await channel.send(file=discord.File('gif.gif'))
 
-@client.event
+'''@client.event
 async def on_typing(channel, user, when):
     global typeSwitch
     global lapsed_time
-    if(typeSwitch is False):
-        epoch_time = (when - datetime(1970, 1, 1)).total_seconds()
-        lapsed_time=epoch_time+15
-        typeSwitch=True
+    
+    start_time = (when - datetime(1970, 1, 1)).total_seconds()
+    lapsed_time=start_time+1
         
     print(lapsed_time)
     print(time.time())
     
-    if(time.time()>lapsed_time):
+    if(time.time()>lapsed_time and typeSwitch):
         await channel.send('Hamari class me mobile chala rahe hain aap @{0}'.format(str(user)))
-        typeSwitch=False
-        lapsed_time=10000000000
+        lapsed_time=10000000000'''
 
 client.run(TOKEN[:-1])
