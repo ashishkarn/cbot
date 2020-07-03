@@ -24,6 +24,10 @@ async def on_message(message):
         channel=message.channel
         print("test")
         await channel.send('Sir ki Aagya maniye aap log thik h naa.')
+    elif message.content.startswith('Lunch ke baad off'):
+        channel=message.channel
+        print(message.content)
+        await channel.send(file=discord.File('gif.gif'))
 
 @client.event
 async def on_typing(channel, user, when):
@@ -40,5 +44,6 @@ async def on_typing(channel, user, when):
     if(time.time()>lapsed_time):
         await channel.send('Hamari class me mobile chala rahe hain aap @{0}'.format(str(user)))
         typeSwitch=False
+        lapsed_time=10000000000
 
 client.run(TOKEN[:-1])
