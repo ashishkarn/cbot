@@ -1,7 +1,7 @@
 # bot.py
 import os
 
-TOKEN="NzI4NTYwMjExOTY2ODIwNDIz.Xv8QWg.MceE8_DuGXqm95CstX55tOkPHnw"
+TOKEN="NzI4NTYwMjExOTY2ODIwNDIz.Xv85XA.Xq6JC-qhq6VMn5UpI8JXAp7GHj01"
 import discord
 from datetime import datetime
 import time
